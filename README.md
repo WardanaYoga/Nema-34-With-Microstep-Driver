@@ -14,3 +14,24 @@ Kontrol presisi pada masing-masing motor.
 Keandalan dan umur panjang driver dan motor.
 Jika Anda ingin kedua motor bergerak secara sinkron, Anda dapat menghubungkan input sinyal kontrol (step/direction) dari kedua driver ke sumber sinyal yang sama (misalnya microcontroller atau CNC controller). Dengan cara ini, kedua motor akan menerima sinyal kontrol yang identik tetapi tetap dikendalikan oleh driver masing-masing.
 
+LANGKAH MENGHIDUPKAN MOTOR NEMA CNC
+1. MENGGUNAKAN GBRL UPLOAD PADA ARDUINO UNO
+2. MENGGUNAKAN OPENBUILDS
+3. MEMBALIK KABEL SALAH SATU MOTOR NEMA DI SUMBU X MISAL A+ JADI A-
+
+Untuk menghubungkan 4 driver stepper motor dengan Arduino Uno menggunakan GRBL dan OpenBuilds, berikut adalah konfigurasi pin yang sesuai:
+
+Konfigurasi Pin Arduino Uno untuk GRBL
+GRBL default menggunakan pin sebagai berikut:
+
+X Step → Pin 2
+X Dir → Pin 5
+Y Step → Pin 3
+Y Dir → Pin 6
+Z Step → Pin 4
+Z Dir → Pin 7
+Enable (Semua driver) → Pin 8
+Karena dua motor NEMA terhubung ke sumbu X, Anda bisa:
+
+Metode Paralel: Sambungkan kedua driver stepper ke pin yang sama (X Step & X Dir).
+Metode Seri: Sambungkan kedua motor ke satu driver (hanya untuk motor dengan spesifikasi identik).
